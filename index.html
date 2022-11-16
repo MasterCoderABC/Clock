@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/19c60793e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="button"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+    <div class="sidebar">
+      <header>Clock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+      </header><br><br>
+      <ul>
+        <li><a href="#timeSection">Time</a></li>
+        <li><a href="#">IDK</a></li>
+     </ul>
+    </div>
+    <section id="timeSection"></section>
+    <center style="margin: 0;">
+        <h1>Clock</h1>
+        <label for="timezone">TimeZone:</label>
+        <select name="timezone" id="timezone">
+          <option>Select Option</option>
+        </select><br>
+        <h2 id="time"></h2>
+        <h2 id="seconds"></h2><br>
+        <h3 id="date"></h3>
+        <h3 id="dty"></h3>
+    </center>
+
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>

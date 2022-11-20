@@ -104,9 +104,17 @@ getAllPossible();
 document.getElementById("timezone").addEventListener("change", () => {
     var e = document.getElementById("timezone");
     var text = e.options[e.selectedIndex].text;
+    if (text == "Select Option"){
+      document.getElementById("time").innerHTML = "";
+      document.getElementById("seconds").innerHTML = "";
+      document.getElementById("date").innerHTML = ""; 
+      document.getElementById("dty").innerHTML = "";
+      document.getElementById("dayofweek").innerHTML = "";
+    }else{
     api_url = "http://worldtimeapi.org/api/timezone/" + text;
     getTimezone();
     setInterval(myFunction, 1000);
+    }
 });
 
 function myFunction(){

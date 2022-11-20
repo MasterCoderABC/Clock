@@ -263,10 +263,10 @@ function clock() {
     
         function myClock() {
             --c
-            var seconds = c % 60; // Seconds that cannot be written in minutes
-            var secondsInMinutes = (c - seconds) / 60; // Gives the seconds that COULD be given in minutes
-            var minutes = secondsInMinutes % 60; // Minutes that cannot be written in hours
-            var hours = (secondsInMinutes - minutes) / 60;
+            var seconds = Math.floor(c % 60); // Seconds that cannot be written in minutes
+            var secondsInMinutes = Math.floor((c - seconds) / 60); // Gives the seconds that COULD be given in minutes
+            var minutes = Math.floor(secondsInMinutes % 60); // Minutes that cannot be written in hours
+            var hours = Math.floor((secondsInMinutes - minutes) / 60);
             localStorage.setItem("hours", hours);
             localStorage.setItem("minutes", minutes);
             localStorage.setItem("seconds", seconds);

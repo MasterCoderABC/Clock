@@ -121,7 +121,7 @@ function myFunction(){
     getTimezone();
 }
 
-//Stopwatch code
+//Stopwatch  code
 var stopWatchMiliSeconds = 00;
 var stopwatchSeconds = 00;
 var stopWatchMin = 00;

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/19c60793e2.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+  <audio src="sound.mp3" id="sound"></audio>
+    <input type="checkbox" id="check">
+  <label for="check">
+    <i class="fas fa-bars" id="button"></i>
+    <i class="fas fa-times" id="cancel"></i>
+  </label>
+    <div class="sidebar">
+      <header>Clock&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+      </header><br><br>
+      <ul>
+        <li><a href="#timeSection">Time</a></li>
+        <li><a href="#stopWatchSec">Stopwatch</a></li>
+        <li><a href="#timerSection">Timer</a></li>
+     </ul>
+    </div>
+    <section id="timeSection">
+    <center style="margin: 0;">
+        <h1>Clock</h1>
+        <label for="timezone">TimeZone:</label>
+        <select name="timezone" id="timezone">
+          <option>Select Option</option>
+        </select><br>
+        <h2 id="time"></h2>
+        <h2 id="seconds"></h2><br>
+        <h3 id="dayofweek"></h2>
+        <h3 id="date"></h3>
+        <h3 id="dty"></h3>
+    </center>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br>
+
+  <section id="stopWatchSec">
+     <center><h2>Stopwatch</h2>
+     <br>
+     <h1 id="stopWatchHours">00:</h1><h1 id="stopWatchMin">00:</h1><h1 id="stopWatchSeconds">00.</h1><h1 id="stopWatchMiliSeconds">00</h1><br>
+     <h5 id="hr">hr</h5><h5 id="min">min</h5><h5>sec</h5>
+     <br><br>
+     <button class="button" id="start"><i class="fa-solid fa-play" id="i"></i></button><button class="button" id="reset"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+    </center>
+  </section>
+  <br><br><br><br><br><br><br><br><br><br><br>
+  <section id="timerSection">
+    <center>
+      <h2>Timer</h2>
+    <br>
+    <h1 id="timerHours">00:</h1><h1 id="timerMin">00:</h1><h1 id="timerSeconds">00</h1><br>
+    <h5 class="h5">hr</h5><h5 class="h5">min</h5><h5 class="h5">sec</h5>
+    <br><br>
+    <input type="number" id="hoursInp" class="timer" placeholder="Hours"><input type="number" id="minInp" class="timer" placeholder="Minutes"><input type="number" id="secInp" class="timer" placeholder="Seconds" maxlength="2"><br>
+    <h1 id="timeover" style="visibility: hidden;">Time Over!</h2>
+    <br>
+    <button class="button" id="start2" onclick="clock()"><i class="fa-solid fa-play" id="i2"></i></button><button class="button" id="reset2" onclick="reset2()"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+   </center>
+ </section>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
